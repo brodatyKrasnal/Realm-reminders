@@ -8,5 +8,6 @@ import RealmSwift
 class RemList: Object {
     @objc dynamic var listName:String = ""
     @objc dynamic var listDate: Date?
+    @objc dynamic var listColor: String = ""
     var toReminders = List<Reminder>()
 }

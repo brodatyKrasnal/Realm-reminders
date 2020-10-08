@@ -2,7 +2,6 @@
 //	Realm reminders : ViewController.swift by Tymek on 06/10/2020 19:06.
 //	Copyright ©Tymek 2020. All rights reserved.
 
-
 import UIKit
 import RealmSwift
 
@@ -24,7 +23,10 @@ class ReminderViewController: GenericTableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //
+        if let backColor = UIColor(hexString: passedRemList!.listColor) {
+            view.backgroundColor = backColor
+            navigationController?.navigationBar.backgroundColor = backColor
+        }
     }
     
     //MARK: - TableView Data Management
@@ -37,6 +39,11 @@ class ReminderViewController: GenericTableViewController {
         if let reminder = reminders?[indexPath.row] {
             cell.textLabel?.text = reminder.remName
             cell.accessoryType = reminder.remCompletion == true ? .checkmark : .none
+            if let color = passedRemList?.listColor {
+                let index = indexPath.row
+                cell.backgroundColor = UIColor(hexString: color)!.darken(byPercentage: (CGFloat(index) / CGFloat(reminders!.count) / 2))
+                cell.textLabel?.tintColor = UIColor(contrastingBlackOrWhiteColorOn: UIColor(hexString: color)!, isFlat: true)
+            }
         }
         return cell
     }
@@ -55,57 +62,6 @@ class ReminderViewController: GenericTableViewController {
     }
     
     //MARK: - Realm Data Management
-    override func removeElement(this element: IndexPath) {
-        if let pickedItem = reminders?[element.row] {
-            do {
-                try realm.write {
-                    self.realm.delete(pickedItem)
-                }
-            } catch {
-                print("Errror while remiving item: \(pickedItem) : \(error)")
-            }
-            tableView.reloadData()
-        }
-    }
-    
-    func readRealm () {
-        reminders = realm.objects(Reminder.self).sorted(byKeyPath: "remName", ascending: true)
-        tableView.reloadData()
-    }
-    
-    
-    //MARK: - Adding New Reminders
-    @IBAction func addNewReminder(_ sender: UIBarButtonItem) {
-        var userText = UITextField()
-        
-        let alert = UIAlertController(title: "Add new reminder", message: "", preferredStyle: .alert)
-        
-        alert.addTextField { (inputText) in
-            userText = inputText
-            inputText.placeholder = "Add new note here"
-            inputText.textAlignment = .center
-        }
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-        alert.addAction(UIAlertAction(title: "Add", style: .cancel, handler: { [self] (action) in
-            guard let passedCat = passedRemList else { fatalError("Error with passed RemList while creating a new reminder.")}
-            do {
-                try self.realm.write {
-                    let item = Reminder()
-                    item.remDate = Date()
-                    item.remName = userText.text!
-                    item.remCompletion = false
-                    passedCat.toReminders.append(item)
-                }
-            } catch {
-                print("Error while saving reminder: \(error)")
-            }
-        }))
-        
-        present(alert, animated: true, completion: nil)
-    }
-    
-    //MARK: - Data Manipulation Methods
     func save (this elemenet: Reminder?) {
         
         if let newElement = elemenet {
@@ -120,8 +76,60 @@ class ReminderViewController: GenericTableViewController {
         }
     }
     
+    func readRealm () {
+        reminders = passedRemList?.toReminders.sorted(byKeyPath: "remName",ascending: true)
+        tableView.reloadData()
+    }
     
+    override func removeElement(this element: IndexPath) {
+        if let pickedItem = reminders?[element.row] {
+            do {
+                try realm.write {
+                    self.realm.delete(pickedItem)
+                }
+            } catch {
+                print("Errror while remiving item: \(pickedItem) : \(error)")
+            }
+            tableView.reloadData()
+        }
+    }
+    
+    
+    //MARK: - Adding New Reminders
+    
+    @IBAction func addNewReminder(_ sender: UIBarButtonItem) {
+        var userText = UITextField()
+        
+        let alert = UIAlertController(title: "Add new reminder", message: "", preferredStyle: .alert)
+        
+        alert.addTextField { (inputText) in
+            userText = inputText
+            inputText.placeholder = "Add new note here"
+            inputText.textAlignment = .center
+        }
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { (action) in
+            if let passedCat = self.passedRemList {
+                do {
+                    try self.realm.write {
+                        let item = Reminder()
+                        item.remDate = Date()
+                        item.remName = userText.text!
+                        item.remCompletion = false
+                        passedCat.toReminders.append(item)
+                        self.readRealm()
+                    }
+                } catch {
+                    print("Error while saving reminder: \(error)")
+                }
+            }
+        }))
+        present(alert, animated: true, completion: nil)
+    }
 }
+
+//MARK: - SearchBar Methods
 extension ReminderViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         reminders = reminders?.filter(NSPredicate(format: "remName CONTAINS[cd] %@", searchBar.text!)).sorted(byKeyPath: "remName", ascending: true)

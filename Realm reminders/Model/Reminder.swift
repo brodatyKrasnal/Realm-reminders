@@ -12,5 +12,4 @@ class Reminder: Object{
     @objc dynamic var remCompletion: Bool = false
     @objc dynamic var remDueDate: Date?
     var toRemList = LinkingObjects(fromType: RemList.self, property: "toReminders")
-
 }

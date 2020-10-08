@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Rem List TableVC-->
+        <!--Your lists-->
         <scene sceneID="J8r-WH-IyD">
             <objects>
                 <tableViewController id="gAP-MT-He4" customClass="RemListTableVC" customModule="Realm_reminders" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="gAP-MT-He4" id="aYT-5j-wqw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="vsE-zI-nAO">
+                    <navigationItem key="navigationItem" title="Your lists" id="vsE-zI-nAO">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="xdC-WB-u9s">
                             <connections>
                                 <action selector="addNewItem:" destination="gAP-MT-He4" id="hxh-8B-ozh"/>

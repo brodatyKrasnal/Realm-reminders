@@ -2,18 +2,19 @@
 //	Realm reminders : GenericTableViewController.swift by Tymek on 06/10/2020 19:16.
 //	Copyright ©Tymek 2020. All rights reserved.
 
-
 import UIKit
 import SwipeCellKit
 import RealmSwift
 import ChameleonFramework
 
 class GenericTableViewController: UITableViewController, SwipeTableViewCellDelegate  {
+   
     let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.separatorStyle = .singleLine
+        tableView.separatorColor = .white        
     }
     
     // MARK: - Table view data source
