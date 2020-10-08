@@ -3,27 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		827992AB252CDBB300CCBF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827992AA252CDBB300CCBF71 /* AppDelegate.swift */; };
 		827992AD252CDBB300CCBF71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827992AC252CDBB300CCBF71 /* SceneDelegate.swift */; };
-		827992AF252CDBB300CCBF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827992AE252CDBB300CCBF71 /* ViewController.swift */; };
+		827992AF252CDBB300CCBF71 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827992AE252CDBB300CCBF71 /* ReminderViewController.swift */; };
 		827992B2252CDBB300CCBF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827992B0252CDBB300CCBF71 /* Main.storyboard */; };
 		827992B4252CDBB600CCBF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 827992B3252CDBB600CCBF71 /* Assets.xcassets */; };
 		827992B7252CDBB600CCBF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827992B5252CDBB600CCBF71 /* LaunchScreen.storyboard */; };
+		82B22158252DF0AE0086E6FE /* RemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B22157252DF0AE0086E6FE /* RemList.swift */; };
+		82B2215C252DFC730086E6FE /* RemListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2215B252DFC730086E6FE /* RemListTableVC.swift */; };
+		82F7FCB1252CDCB700977790 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F7FCB0252CDCB700977790 /* Reminder.swift */; };
+		82F7FCC5252CDE0700977790 /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F7FCC4252CDE0700977790 /* GenericTableViewController.swift */; };
+		FD094513A751C1309B1D3336 /* Pods_Realm_reminders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C01FEF2AA6243F3E5BB80C /* Pods_Realm_reminders.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27C01FEF2AA6243F3E5BB80C /* Pods_Realm_reminders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Realm_reminders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		827992A7252CDBB300CCBF71 /* Realm reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realm reminders.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		827992AA252CDBB300CCBF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		827992AC252CDBB300CCBF71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		827992AE252CDBB300CCBF71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		827992AE252CDBB300CCBF71 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		827992B1252CDBB300CCBF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		827992B3252CDBB600CCBF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		827992B6252CDBB600CCBF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		827992B8252CDBB600CCBF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82B22157252DF0AE0086E6FE /* RemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemList.swift; sourceTree = "<group>"; };
+		82B2215B252DFC730086E6FE /* RemListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemListTableVC.swift; sourceTree = "<group>"; };
+		82F7FCB0252CDCB700977790 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		82F7FCC4252CDE0700977790 /* GenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
+		B41406F6446BA4F0762379B2 /* Pods-Realm reminders.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Realm reminders.debug.xcconfig"; path = "Target Support Files/Pods-Realm reminders/Pods-Realm reminders.debug.xcconfig"; sourceTree = "<group>"; };
+		EFFF34053675E5A1642C0829 /* Pods-Realm reminders.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Realm reminders.release.xcconfig"; path = "Target Support Files/Pods-Realm reminders/Pods-Realm reminders.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD094513A751C1309B1D3336 /* Pods_Realm_reminders.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00E7ED068734EEE49096C7B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27C01FEF2AA6243F3E5BB80C /* Pods_Realm_reminders.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8279929E252CDBB300CCBF71 = {
 			isa = PBXGroup;
 			children = (
 				827992A9252CDBB300CCBF71 /* Realm reminders */,
 				827992A8252CDBB300CCBF71 /* Products */,
+				AD6C4EFDB70A286DF93CC215 /* Pods */,
+				00E7ED068734EEE49096C7B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +79,52 @@
 		827992A9252CDBB300CCBF71 /* Realm reminders */ = {
 			isa = PBXGroup;
 			children = (
+				82F7FCAF252CDC9F00977790 /* Model */,
+				827992BF252CDBC700CCBF71 /* Control */,
+				827992BE252CDBC200CCBF71 /* View */,
+				827992B3252CDBB600CCBF71 /* Assets.xcassets */,
 				827992AA252CDBB300CCBF71 /* AppDelegate.swift */,
 				827992AC252CDBB300CCBF71 /* SceneDelegate.swift */,
-				827992AE252CDBB300CCBF71 /* ViewController.swift */,
-				827992B0252CDBB300CCBF71 /* Main.storyboard */,
-				827992B3252CDBB600CCBF71 /* Assets.xcassets */,
 				827992B5252CDBB600CCBF71 /* LaunchScreen.storyboard */,
 				827992B8252CDBB600CCBF71 /* Info.plist */,
 			);
 			path = "Realm reminders";
+			sourceTree = "<group>";
+		};
+		827992BE252CDBC200CCBF71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				827992B0252CDBB300CCBF71 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		827992BF252CDBC700CCBF71 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				82B2215B252DFC730086E6FE /* RemListTableVC.swift */,
+				827992AE252CDBB300CCBF71 /* ReminderViewController.swift */,
+				82F7FCC4252CDE0700977790 /* GenericTableViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		82F7FCAF252CDC9F00977790 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82B22157252DF0AE0086E6FE /* RemList.swift */,
+				82F7FCB0252CDCB700977790 /* Reminder.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD6C4EFDB70A286DF93CC215 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B41406F6446BA4F0762379B2 /* Pods-Realm reminders.debug.xcconfig */,
+				EFFF34053675E5A1642C0829 /* Pods-Realm reminders.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 827992BB252CDBB600CCBF71 /* Build configuration list for PBXNativeTarget "Realm reminders" */;
 			buildPhases = (
+				4B84AF32E8147F01E51E4D35 /* [CP] Check Pods Manifest.lock */,
 				827992A3252CDBB300CCBF71 /* Sources */,
 				827992A4252CDBB300CCBF71 /* Frameworks */,
 				827992A5252CDBB300CCBF71 /* Resources */,
+				CA2400597FA57B13D66FC195 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +194,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4B84AF32E8147F01E51E4D35 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Realm reminders-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA2400597FA57B13D66FC195 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Realm reminders/Pods-Realm reminders-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Realm reminders/Pods-Realm reminders-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Realm reminders/Pods-Realm reminders-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		827992A3252CDBB300CCBF71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				827992AF252CDBB300CCBF71 /* ViewController.swift in Sources */,
+				82B22158252DF0AE0086E6FE /* RemList.swift in Sources */,
+				82F7FCC5252CDE0700977790 /* GenericTableViewController.swift in Sources */,
+				827992AF252CDBB300CCBF71 /* ReminderViewController.swift in Sources */,
 				827992AB252CDBB300CCBF71 /* AppDelegate.swift in Sources */,
 				827992AD252CDBB300CCBF71 /* SceneDelegate.swift in Sources */,
+				82B2215C252DFC730086E6FE /* RemListTableVC.swift in Sources */,
+				82F7FCB1252CDCB700977790 /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +391,7 @@
 		};
 		827992BC252CDBB600CCBF71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B41406F6446BA4F0762379B2 /* Pods-Realm reminders.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +411,7 @@
 		};
 		827992BD252CDBB600CCBF71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFFF34053675E5A1642C0829 /* Pods-Realm reminders.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
